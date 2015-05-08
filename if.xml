@@ -8,10 +8,10 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="57" inline="false">
-        <mutation else="1"></mutation>
+        <mutation elseif="1" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="64" inline="true">
-            <field name="OP">GT</field>
+            <field name="OP">LT</field>
             <value name="A">
               <block type="sensor_object" id="71">
                 <field name="OBJECT">LEFTFRONT</field>
@@ -25,11 +25,24 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_forward" id="88">
+          <block type="movement_right" id="141">
             <next>
-              <block type="robot_delay" id="90" inline="true">
+              <block type="robot_delay" id="142" inline="true">
                 <value name="DELAY">
-                  <block type="math_number" id="107">
+                  <block type="math_number" id="143">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="DO1">
+          <block type="movement_left" id="165">
+            <next>
+              <block type="robot_delay" id="166" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="167">
                     <field name="NUM">200</field>
                   </block>
                 </value>
@@ -38,11 +51,11 @@
           </block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_right" id="141">
+          <block type="movement_forward" id="88">
             <next>
-              <block type="robot_delay" id="142" inline="true">
+              <block type="robot_delay" id="90" inline="true">
                 <value name="DELAY">
-                  <block type="math_number" id="143">
+                  <block type="math_number" id="107">
                     <field name="NUM">200</field>
                   </block>
                 </value>
